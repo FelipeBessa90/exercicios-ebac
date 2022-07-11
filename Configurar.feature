@@ -28,7 +28,7 @@ Dado que cliente acesse a página compras da loja EBAC selecione o produto, deve
 Cenário: Deve permitir apenas 10 produtos por venda
 Dado que eu acesse a página compras da loja EBAC selecione o que vou comprar 
 Quando quantidade qantidade < = 10
-Então segui para carrinho para finalizar a compra
+Entao devera ser direciona para o carrinho 
 
 Contexto:
 Dado que cliente acesse a página compras da loja EBAC selecione o produto, dever obrigatorio selecionar quantidade, cor e tamanho
