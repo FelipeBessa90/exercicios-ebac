@@ -12,7 +12,7 @@ Critérios de Aceitação:
 3 – Quando eu clicar no botão “limpar” deve voltar ao estado original
 
 1
-Context
+Context:
 Dado que cliente acesse a página compras da loja EBAC selecione o produto, dever obrigatorio selecionar quantidade, cor e tamanho
 
 Cenário: Seleções de cor, tamanho e quantidade devem ser obrigatórios
