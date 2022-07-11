@@ -12,7 +12,7 @@ Critérios de Aceitação:
 3 – Quando eu clicar no botão “limpar” deve voltar ao estado original
 
 1
-Context:
+Contexto:
 Dado que cliente acesse a página compras da loja EBAC selecione o produto, dever obrigatorio selecionar quantidade, cor e tamanho
 
 Cenário: Seleções de cor, tamanho e quantidade devem ser obrigatórios
@@ -27,16 +27,11 @@ Dado que cliente acesse a página compras da loja EBAC selecione o produto, deve
 
 Cenário: Deve permitir apenas 10 produtos por venda
 Dado que eu acesse a página compras da loja EBAC selecione o que vou comprar 
-Quando quantidade qantidade < = 10
-Entao devera ser direciona para o carrinho 
-
-Contexto:
-Dado que cliente acesse a página compras da loja EBAC selecione o produto, dever obrigatorio selecionar quantidade, cor e tamanho
-
-Cenário: Deve permitir apenas 10 produtos por venda
-Dado que eu acesse a página compras da loja EBAC selecione o que vou comprar 
-Quando quantidade qantidade > 11
-Entao apresentar mensagem "Permitido até 10 itens"
+Quando quantidade qantidade > 10
+Entao deve apresentar mesagem "Permitido até 10 itens" 
+E ser direcionado para corrigir o campo invalido
+E se quantidade < = 10 seguir para proximo passo carrinho
+Entao apresentar opções para a conclusão da compra
 
 3
 Contexto:
