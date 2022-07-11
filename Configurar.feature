@@ -28,7 +28,7 @@ Dado que cliente acesse a página compras da loja EBAC selecione o produto, deve
 Cenário: Deve permitir apenas 10 produtos por venda
 Dado que eu acesse a página compras da loja EBAC selecione o que vou comprar 
 Quando quantidade qantidade > 10
-Entao deve apresentar mesagem "Permitido até 10 itens" 
+E deve apresentar mesagem "Permitido até 10 itens" 
 E ser direcionado para corrigir o campo invalido
 E se quantidade < = 10 seguir para proximo passo carrinho
 Entao apresentar opções para a conclusão da compra
