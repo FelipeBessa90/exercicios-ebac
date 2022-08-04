@@ -1,4 +1,4 @@
- #language: pt
+#language: pt
 
 Funcionalidade: Configurar produto
 Como cliente da EBAC-SHOP
@@ -11,9 +11,10 @@ Critérios de Aceitação:
 2 – Deve permitir apenas 10 produtos por venda
 3 – Quando eu clicar no botão “limpar” deve voltar ao estado original
 
-1
 Contexto:
-Dado que cliente acesse a página compras da loja EBAC selecione o produto, dever obrigatorio selecionar quantidade, cor e tamanho
+Dado Cliente acessa webstor seleciona seu produto e personaliza seu pedido, seleciona a quantidade e precise refazer seu pedido.
+
+1
 
 Cenário: Seleções de cor, tamanho e quantidade devem ser obrigatórios
 Quando usuario seleciona Cor da camisa azul
@@ -22,22 +23,17 @@ E quantidade 5
 Entao devera ser direcionado para finalizar a compra
 
 2
-Contexto:
-Dado que cliente acesse a página compras da loja EBAC selecione o produto, dever obrigatorio selecionar quantidade, cor e tamanho
 
-Cenário: Deve permitir apenas 10 produtos por venda
+Cenário: selecao de quantidade de produto
 Dado que eu acesse a página compras da loja EBAC selecione o que vou comprar com uma quantidade 11 itens
-Quando quantidade qantidade > = 11
-E deve apresentar mesagem "Permitido até 10 itens" 
-E ser direcionado para corrigir o campo invalido
+Quando quantidade qantidade > 10 não permitir apresentar mensagem "nao é permitido quantidade superio a 10 itens por vez"
+E ser direcionado para o campo quantidade para corrigir dentro do valor permitido
 E se quantidade < = 10 seguir para proximo passo finalizar a compra
-Entao apresentar opções para a conclusão da compra
+Entao apresentar tela de finalização
 
 3
-Contexto:
-Dado que cliente acesse apagina de compras da loja EBAC selecione o produto o tamanho e cor, mas queira mudar todas as informacões
 
 Cenário: Quando cliente clicar no botão “limpar” deve voltar ao estado original
-Quando Cliente apertar na opção de Limpar dados
+Quando Cliente seleciona seus produtos e personaliza mas muda de ideia 
+E cliente aperta no botao de limpar
 Então O sistema deve voltar ao estado original sem nenhum preenchimento
-
