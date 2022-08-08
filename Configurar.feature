@@ -1,4 +1,4 @@
-#language: pt
+ #language: pt
 
 Funcionalidade: Configurar produto
 Como cliente da EBAC-SHOP
@@ -25,11 +25,11 @@ Entao devera ser direcionado para finalizar a compra
 2
 
 Cenário: selecao de quantidade de produto
-Dado que eu acesse a página compras da loja EBAC selecione o que vou comprar com uma quantidade 11 itens
-Quando quantidade qantidade > 10 não permitir apresentar mensagem "nao é permitido quantidade superio a 10 itens por vez"
+Quando O usuario acessa a página compras da loja EBAC seleciona o que vai comprar com uma quantidade 11 itens
+Entao mensagem do sistema "nao é permitido quantidade superio a 10 itens por vez"
 E ser direcionado para o campo quantidade para corrigir dentro do valor permitido
-E se quantidade < = 10 seguir para proximo passo finalizar a compra
-Entao apresentar tela de finalização
+Entao se quantidade < = 10 seguir para proximo passo finalizar a compra 
+ 
 
 3
 
