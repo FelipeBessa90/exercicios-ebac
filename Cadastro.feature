@@ -24,9 +24,7 @@ Cenário: cliente erra seu email
 Dado que cliente digita seu email errado felipe#ebac.com.br
 Então apresentar mensagem de erro "Dados inconsistentes"
 
-
 3
 Cenário: Cliente deixa campos obrigatorio em branco
 Dado que cliente deixe um campo em branco Sem preencher
 Então apresentar mensagem de erro "Campo em branco"
-
