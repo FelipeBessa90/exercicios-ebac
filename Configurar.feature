@@ -25,11 +25,12 @@ Entao devera ser direcionado para finalizar a compra
 2
 
 Cenário: selecao de quantidade de produto
-Quando O usuario acessa a página compras da loja EBAC seleciona o que vai comprar com uma quantidade 11 itens
-Entao mensagem do sistema "nao é permitido quantidade superio a 10 itens por vez"
+Dado quantidade limite < = 10 por compra
+Quando O usuario acessa a página compras da loja EBAC seleciona o que vai comprar com a quantidade 11 itens
+Entao mensagem do sistema "nao é permitido quantidade superio a 10 itens por compra"
 E ser direcionado para o campo quantidade para corrigir dentro do valor permitido
 Entao se quantidade < = 10 seguir para proximo passo finalizar a compra 
- 
+
 3
 
 Cenário: Quando cliente clicar no botão “limpar” deve voltar ao estado original
