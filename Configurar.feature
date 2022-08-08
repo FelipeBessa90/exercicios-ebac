@@ -30,7 +30,6 @@ Entao mensagem do sistema "nao é permitido quantidade superio a 10 itens por ve
 E ser direcionado para o campo quantidade para corrigir dentro do valor permitido
 Entao se quantidade < = 10 seguir para proximo passo finalizar a compra 
  
-
 3
 
 Cenário: Quando cliente clicar no botão “limpar” deve voltar ao estado original
