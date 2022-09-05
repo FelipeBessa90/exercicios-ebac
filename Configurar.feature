@@ -8,11 +8,11 @@ Para depois inserir no carrinho
 
 Critérios de Aceitação:
 1 – Seleções de cor, tamanho e quantidade devem ser obrigatórios
-2 – Deve permitir apenas 10 produtos por venda
+2 – Deve permitir apenas 10 produtos por compra
 3 – Quando eu clicar no botão “limpar” deve voltar ao estado original
 
 Contexto:
-Dado Cliente acessa webstor seleciona seu produto e personaliza seu pedido, seleciona a quantidade e precise refazer seu pedido.
+Dado Cliente acessa webstor seleciona seu produto e personaliza seu pedido, seleciona a quantidade que nao pode exceder a 10 itens por compra.
 
 1
 
@@ -24,13 +24,11 @@ Entao devera ser direcionado para finalizar a compra
 
 2
 
-Cenário: selecao de quantidade de produto
-Dado quantidade limite < = 10 por compra
-Quando O usuario acessa a página compras da loja EBAC seleciona o que vai comprar com a quantidade 11 itens
-Entao mensagem do sistema "nao é permitido quantidade superio a 10 itens por compra"
-E ser direcionado para o campo quantidade para corrigir dentro do valor permitido
-Entao se quantidade < = 10 seguir para proximo passo finalizar a compra 
-
+Cenário: Cliente excede o limite 10 itens por compra
+Quando O usuario acessa a página compras da loja EBAC seleciona 11 itens e tenta finalizar
+Entao mensagem do sistema "nao é permitido quantidade superio a 10 itens por compra" direciona o usuario para o campo de quantidade
+Quando Usuario direcionado para o campo quantidade onde o mesmo reduz a quantidade para 10 itens
+Entao Usuario e direcionado para finalizar sua compra
 3
 
 Cenário: Quando cliente clicar no botão “limpar” deve voltar ao estado original
